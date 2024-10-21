@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4m06mauiPickerKolor.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            >
+
+            <Label
+                Text="napis próbny"
+                x:Name="vApp"
+                FontSize="50"
+                />
+
+            <Picker 
+               x:Name="pickerColor"
+               Title="wybierz kolor"
+                SelectedIndexChanged="onPickerSelected"
+               >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>czerwony</x:String>
+                        <x:String>zielony</x:String>
+                        <x:String>niebieski</x:String>
+                        <x:String>żółty</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker 
+               x:Name="pickerColorFont"
+               Title="wybierz kolor Fontu"
+               
+               >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Black</x:String>
+                        <x:String>Red</x:String>
+                        <x:String>Green</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button
+                Text="zmień kolor czcionki"
+                Clicked="onButtonClicked"
+                />
+            <ListView 
+               x:Name="lvColorFont"
+                ItemSelected="lvSelected"
+               >
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Black</x:String>
+                        <x:String>Red</x:String>
+                        <x:String>Green</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>    
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
